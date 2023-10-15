@@ -1,11 +1,11 @@
-﻿Bank user = new Bank();
+﻿BankAccount user = new BankAccount();
 
-user.FirstName = "arlinda";
-user.LastName = "Uruci";
+user.FirstName = "Abdirashid";
+user.LastName = "Mowlid";
 user.Deposit(400F);
 
 
-Console.WriteLine(user.FullName);
-Console.WriteLine(user.CheckAccount());
-Console.WriteLine(user.Balance);
-Console.WriteLine(user.AccountDate);
+user.Deposit(1000);
+user.Withdraw(500);
+user.AccountActivities();
+user.CheckAccount();

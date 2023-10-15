@@ -1,72 +1,79 @@
-using System.Diagnostics;
-using System.Net.NetworkInformation;
-
-class Bank
+class BankAccount
 {
-    public string FirstName { get; set; } = string.Empty;
+    //Field
+    private int _index = 0;
+    private double balance;
 
-    public string LastName { get; set; } = string.Empty;
-
-    public string FullName
+    // Property
+    private double Balance
     {
-        get
+        get { return balance; }
+        set
         {
-            return FirstName + " " + LastName;
-        }
-        set { }
-    }
-
-    private List<string> accountActivities { get; }
-
-    public string AccountDate = DateTime.Now.ToString();
-
-    private double _balance;
-    public double Balance
-    {
-        get { return _balance; }
-        set { _balance = value; }
-    }
-
-    public float CheckAccount()
-    {
-        Console.WriteLine("");
-    }
-
-    public void Withdraw(float Amount)
-    {
-        if (Amount > 10000 && Amount < 50)
-        {
-            throw new Exception("Çekilecek para 50den küçük ve 10000den büyük olamaz");
-        }
-        else
-        {
-            if (_balance >= Amount)
+            if (value < 0)
             {
-                _balance -= Amount;
-                accountActivities.Add($"Cekilmis Para{Amount} Tarih {DateTime.Now}");
+                Console.WriteLine("Balance not enough!");
+            }
+            else
+            {
+                balance = value;
             }
         }
     }
 
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public string FullName { get { return FirstName + " " + LastName; } }
+    private string[] Activities { get; }
+    // private List<string> Activities { get; }
 
-    public void Deposit(float Amount)
+    public DateTime AccountDate { get; }
+
+    // Constructor
+    public BankAccount()
     {
-        _balance += Amount;
+        AccountDate = DateTime.Now;
+        Activities = new string[16];
+        //Activities = new List<string>();
     }
 
-    public void AccountActivities()
+    // Methods
+    public void Deposit(float value)
     {
-        foreach (var activity in accountActivities)
+        Balance += value;
+
+        Activities[_index] = string.Format("{0} date {1} is deposited! New Balance: {2}", DateTime.Now, value, Balance);
+        //Activities.Add(string.Format("{0} date {1} is deposited! New Balance: {2}", DateTime.Now, value, Balance));
+        _index++;
+    }
+
+    public void Withdraw(float value)
+    {
+        if (value < 50 || value > 10000)
+            System.Console.WriteLine("You can't withdraw less than 50 and more than 10000!");
+
+        else
         {
-            Console.WriteLine(activity);
+            var amount = Balance - value;
+            if (amount < 0)
+                System.Console.WriteLine("Insufficient Balance! Can't withdraw: " + value.ToString());
+            else
+            {
+                Balance = amount;
+                Activities[_index] = string.Format("{0} date {1} is withdrawed! New Balance: {2}", DateTime.Now, value, Balance);
+                _index++;
+            }
         }
     }
-
-    public Account()
+    public void CheckAccount()
     {
-        accountActivities = new List<string>();
+        System.Console.WriteLine(string.Format("Create Date: {0}, Name: {1}, Balance: {2}", AccountDate, FullName, Balance));
     }
-
-
-
+    public void AccountActivities()
+    {
+        for (int i = 0; i < _index; i++)
+        {
+            System.Console.WriteLine(Activities[i]);
+        }
+    }
 }
