@@ -42,4 +42,9 @@ class Employee
         this.LastName = Lastname;
     }
 
+    public override string ToString()
+    {
+        return $"[{Id}] {FirstName} {LastName}";
+    }
+
 }
