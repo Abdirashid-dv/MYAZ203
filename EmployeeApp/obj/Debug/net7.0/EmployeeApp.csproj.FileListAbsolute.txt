@@ -1,0 +1,14 @@
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\bin\Debug\net7.0\EmployeeApp.exe
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\bin\Debug\net7.0\EmployeeApp.deps.json
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\bin\Debug\net7.0\EmployeeApp.runtimeconfig.json
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\bin\Debug\net7.0\EmployeeApp.dll
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\bin\Debug\net7.0\EmployeeApp.pdb
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.AssemblyInfoInputs.cache
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.AssemblyInfo.cs
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.csproj.CoreCompileInputs.cache
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.dll
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\refint\EmployeeApp.dll
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.pdb
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\EmployeeApp.genruntimeconfig.cache
+C:\Users\Abdirashid\MYAZ203\EmployeeApp\obj\Debug\net7.0\ref\EmployeeApp.dll
