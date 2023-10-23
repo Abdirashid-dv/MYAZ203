@@ -1,0 +1,41 @@
+@startuml inheritance
+
+class Employee{
+    -id
+    -firstName
+    -lastName
+    fullName
+    atCreateDate
+    -salary
+    +work()
+}
+
+class Worker
+{
+    area
+    cleanAround()
+
+}
+
+class Student
+{
+    startTime
+    doIntern()
+}
+
+class Manager{
+    position
+    getHire()
+}
+
+class Assistance
+{
+    getReport()
+}
+
+Worker -up-|> Employee : <<extends>>
+Student -up-|> Employee : <<extends>>
+Manager -up-|> Employee : <<extends>>
+Assistance -up-|> Manager : <<extends>>
+
+@enduml

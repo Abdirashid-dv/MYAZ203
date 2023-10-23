@@ -1,6 +1,6 @@
 using System.Dynamic;
-
-class Employee
+namespace EmployeeApp.Models;
+public class Employee
 {
 
     public int Id { get; set; }
@@ -16,6 +16,10 @@ class Employee
         }
     }
 
+    public virtual void Work()
+    {
+        System.Console.WriteLine("Employee is working...");
+    }
 
     // Asiriyukleme -- Overload
     // Constructor Geriye donus tipi yoktur
@@ -29,22 +33,20 @@ class Employee
     public Employee(int id, string Fname, string Lname) : this(Fname, Lname)
     {
         Id = id;
-        // FirstName = Fname;
-        // LastName = Lname;
 
     }
 
     public Employee(string Firstname, string Lastname) : this()
     {
-        // Random id = new Random();
-        // id.Next(1, 100);
+
         this.FirstName = Firstname;
         this.LastName = Lastname;
     }
 
     public override string ToString()
     {
-        return $"[{Id}] {FirstName} {LastName}";
+        return $"[{Id}] {FullName} {this.AtCreatedDate}";
     }
+
 
 }
