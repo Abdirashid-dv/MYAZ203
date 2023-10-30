@@ -1,0 +1,12 @@
+@startuml HeapApp
+
+title HeapApp
+
+abstract class Heap
+{
+    #list,
+    +Add(),
+    +Extract()
+}
+
+@enduml
