@@ -8,12 +8,31 @@ public class Rocket : SpaceShip
 
     public override void Land()
     {
-        throw new NotImplementedException();
+        System.Console.WriteLine($"{Name} Rocket is Landed!");
     }
 
     public override void Launch()
     {
-        throw new NotImplementedException();
+        System.Console.WriteLine($"{Name} Rocket is Launched!");
+    }
+
+    public new void TravelTo(Planet planet)
+    {
+        var travelTime =
+        planet.Distance / CalculateTravelDistance(CalculateDeltaV(planet.Gravity));
+        System.Console.WriteLine($"Travel Time to {planet.Name}: {travelTime}");
+    }
+
+    protected new double CalculateDeltaV(double Gravity)
+    {
+        var deltaV = SpecificImpulse * Gravity * Math.Log((Mass + Fuel) / Mass);
+        return deltaV;
+    }
+
+    protected new double CalculateTravelDistance(double DeltaV)
+    {
+        var travelDistance = 2 * DeltaV / (Thrust * 1000);
+        return travelDistance;
     }
 
 }

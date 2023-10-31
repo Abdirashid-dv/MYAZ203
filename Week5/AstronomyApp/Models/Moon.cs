@@ -14,6 +14,6 @@ public class Moon : CelestialBody
     // Methods
     public override void Describe()
     {
-        throw new NotImplementedException();
+        System.Console.WriteLine($"{Name}\n{Mass}\n{Radius}\n{ParentPlanet.Name}");
     }
 }

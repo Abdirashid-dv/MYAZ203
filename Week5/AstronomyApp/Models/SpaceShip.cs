@@ -27,25 +27,22 @@ public abstract class SpaceShip
 
     public double SpecificImpulse { get; set; }
 
-    public static double Gravity = 9.8;
-
 
     // Methods
     public abstract void Launch();
 
     public abstract void Land();
 
-
-    public void TravelTo(CelestialBody celestialBody)
+    public void TravelTo(Planet planet)
     {
 
-        var TravelDistance = DateTime.Now;
-
-        System.Console.WriteLine(TravelDistance);
+        var travelTime =
+       planet.Distance / CalculateTravelDistance(CalculateDeltaV(planet.Gravity));
+        System.Console.WriteLine($"Travel Time to {planet.Name}: {travelTime}");
 
     }
 
-    protected double CalculateDeltaV()
+    protected double CalculateDeltaV(double Gravity)
     {
         var deltaV = SpecificImpulse + Gravity * Math.Log((Mass + Fuel) / Mass);
 
