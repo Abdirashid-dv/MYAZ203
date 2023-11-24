@@ -121,10 +121,12 @@ MusicList musicList = new MusicList(songs);
 
 foreach (var item in musicList.Sort())
 {
-    System.Console.WriteLine(item.ToString("title"));
+    System.Console.WriteLine(item.ToString("TITLE"));
 }
 
 musicList.Remove(5);
 System.Console.WriteLine(new string('-', 5));
+// musicList.Update(2, song4);
 musicList.Display();
+
 

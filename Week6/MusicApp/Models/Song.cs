@@ -22,6 +22,7 @@ public class Song : IFormattable, IComparable
         else
             throw new ArgumentException("Obj has not Title");
     }
+
     public string ToString(string? format = "id", IFormatProvider? formatProvider = null)
     {
         if (String.IsNullOrEmpty(format)) format = "id";
@@ -39,6 +40,7 @@ public class Song : IFormattable, IComparable
                 throw new FormatException(String.Format("The {0} format string is not supported.", format));
         }
     }
+
 
     // Constructor
     public Song()

@@ -23,6 +23,7 @@ public class MusicList : IEnumerable
                 Add(song);
             }
         }
+
     }
 
     // Methods
@@ -81,5 +82,6 @@ public class MusicList : IEnumerable
     {
         return MusicItems.GetEnumerator();
     }
+
 
 }
