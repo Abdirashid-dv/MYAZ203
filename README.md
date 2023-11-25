@@ -1,5 +1,5 @@
 # Hafta 01
-* Programlama Paradigmaları
+* Programlama Paradigmalarıa
 * Nesne Yönelimli Programlama
 
 # Hafta 02
