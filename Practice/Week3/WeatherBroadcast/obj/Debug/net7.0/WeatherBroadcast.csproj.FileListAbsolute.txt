@@ -1,0 +1,14 @@
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.AssemblyInfoInputs.cache
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.AssemblyInfo.cs
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.csproj.CoreCompileInputs.cache
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\bin\Debug\net7.0\WeatherBroadcast.exe
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\bin\Debug\net7.0\WeatherBroadcast.deps.json
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\bin\Debug\net7.0\WeatherBroadcast.runtimeconfig.json
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\bin\Debug\net7.0\WeatherBroadcast.dll
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\bin\Debug\net7.0\WeatherBroadcast.pdb
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.dll
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\refint\WeatherBroadcast.dll
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.pdb
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\WeatherBroadcast.genruntimeconfig.cache
+C:\Users\Abdirashid\MYAZ203\Week3\WeatherBroadcast\obj\Debug\net7.0\ref\WeatherBroadcast.dll
