@@ -15,7 +15,7 @@ public class PostsController : ControllerBase
         PostsRepository.AddPost(post);
     }
 
-    [HttpPut("id")]
+    [HttpPost("{id:int}")]
     public void AddComment([FromRoute] int postId, [FromBody] Comments comment)
     {
         PostsRepository.AddComment(postId, comment);
@@ -28,13 +28,13 @@ public class PostsController : ControllerBase
         return Ok(PostsRepository.GetAllPosts());
     }
 
-    [HttpGet("id")]
+    [HttpGet("{id:int}")]
     public List<Posts> GetAllPostsByAuthor([FromRoute] int userId)
     {
         return PostsRepository.GetAllPostsByAuthor(userId);
     }
 
-    [HttpGet("{postId}/{userId}")]
+    [HttpGet("{postId:int}&{userId:int}")]
     public Posts GetOnePostByAuthor([FromRoute] int postId, [FromRoute] int userId)
     {
         return PostsRepository.GetOnePostByAuthor(postId, userId);

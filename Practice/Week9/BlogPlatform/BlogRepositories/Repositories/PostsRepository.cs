@@ -13,6 +13,8 @@ public static class PostsRepository
 
     public static void AddPost(Posts post)
     {
+        if (post.Equals(null))
+            return;
         posts.Add(post);
     }
 
