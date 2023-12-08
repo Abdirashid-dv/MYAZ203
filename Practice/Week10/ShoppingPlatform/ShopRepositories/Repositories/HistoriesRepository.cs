@@ -18,12 +18,14 @@ public class HistoriesRepository : IRepository<Histories>
 
     public void DeleteOne(int id)
     {
-        throw new NotImplementedException();
+        var item = GetOne(id);
+        if (item != null)
+            histories.Remove(item);
     }
 
     public List<Histories> GetAll()
     {
-        throw new NotImplementedException();
+        return histories;
     }
 
     public Histories GetOne(int id)
