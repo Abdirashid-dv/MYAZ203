@@ -1,0 +1,11 @@
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\bin\Debug\net7.0\StringLib.deps.json
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\bin\Debug\net7.0\StringLib.dll
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\bin\Debug\net7.0\StringLib.pdb
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.AssemblyInfoInputs.cache
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.AssemblyInfo.cs
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.csproj.CoreCompileInputs.cache
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.dll
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\refint\StringLib.dll
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\StringLib.pdb
+C:\Users\Abdirashid\MYAZ203\ExtensionMethodsApp\StringLib\obj\Debug\net7.0\ref\StringLib.dll
