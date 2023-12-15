@@ -31,3 +31,5 @@
   
 # Hafta 06
 * Interfaces
+* abstract method
+* Lambda expression
