@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntLib", "IntLib\IntLib.csproj", "{F5D8D2EC-F128-4EBE-816E-3A0D62DC9012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntApi", "IntApi\IntApi.csproj", "{57A726DB-CF8D-4BAC-AF92-0D6745DB3BBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5D8D2EC-F128-4EBE-816E-3A0D62DC9012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D8D2EC-F128-4EBE-816E-3A0D62DC9012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D8D2EC-F128-4EBE-816E-3A0D62DC9012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D8D2EC-F128-4EBE-816E-3A0D62DC9012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A726DB-CF8D-4BAC-AF92-0D6745DB3BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A726DB-CF8D-4BAC-AF92-0D6745DB3BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A726DB-CF8D-4BAC-AF92-0D6745DB3BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A726DB-CF8D-4BAC-AF92-0D6745DB3BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
