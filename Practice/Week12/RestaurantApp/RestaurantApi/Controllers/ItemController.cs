@@ -5,11 +5,11 @@ using Repositories;
 namespace RestaurantApi.Controllers;
 
 [ApiController]
-[Route("Item")]
+[Route("api/item")]
 
 public class ItemController : ControllerBase
 {
-    private readonly ItemRepository _itemRepository;
+    private ItemRepository _itemRepository;
 
     public ItemController(ItemRepository itemRepository)
     {
@@ -45,7 +45,7 @@ public class ItemController : ControllerBase
     {
         _itemRepository.Post(item);
 
-        return Ok(item);
+        return Created("Item created!", item);
     }
 
     // Delete: Delete item
@@ -62,7 +62,7 @@ public class ItemController : ControllerBase
 
         _itemRepository.Delete(id);
 
-        return Ok(item);
+        return NoContent();
     }
 
 }

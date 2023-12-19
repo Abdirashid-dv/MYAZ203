@@ -5,7 +5,7 @@ namespace Repositories;
 
 public class OrderRepository : IRepository<Order>
 {
-    private List<Order> _orders { get; set; }
+    private List<Order> _orders;
 
     public OrderRepository(List<Order> orders)
     {

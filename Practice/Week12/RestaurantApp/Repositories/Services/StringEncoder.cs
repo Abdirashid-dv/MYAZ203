@@ -2,7 +2,7 @@ using System.Runtime.Intrinsics.Arm;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Repositories;
+namespace Repositories.Services;
 
 public static class StringEncoder
 {
@@ -13,5 +13,6 @@ public static class StringEncoder
 
         return Convert.ToHexString(hash);
     }
+
 
 }

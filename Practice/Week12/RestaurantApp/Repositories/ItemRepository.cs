@@ -5,11 +5,11 @@ namespace Repositories;
 
 public class ItemRepository : IRepository<Items>
 {
-    private List<Items> _items { get; set; }
+    private List<Items> _items;
 
-    public ItemRepository()
+    public ItemRepository(List<Items> items)
     {
-        _items = new List<Items>();
+        _items = items;
     }
 
     public Items GetOne(int id)
@@ -31,6 +31,11 @@ public class ItemRepository : IRepository<Items>
     public void Delete(int id)
     {
         var item = GetOne(id);
+
+        if (item == null)
+        {
+            throw new Exception("Item not found");
+        }
 
         _items.Remove(item);
     }

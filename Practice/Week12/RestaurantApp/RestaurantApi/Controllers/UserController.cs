@@ -5,11 +5,11 @@ using Repositories;
 namespace RestaurantApi.Controllers;
 
 [ApiController]
-[Route("User")]
+[Route("api/user")]
 
 public class UserController : ControllerBase
 {
-    private readonly UserRepository _userRepository;
+    private UserRepository _userRepository;
 
     public UserController(UserRepository userRepository)
     {
@@ -17,7 +17,7 @@ public class UserController : ControllerBase
     }
 
     // GET: User by id
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public IActionResult GetUser(int id)
     {
         var user = _userRepository.GetOne(id);
@@ -51,7 +51,7 @@ public class UserController : ControllerBase
 
         _userRepository.Post(user);
 
-        return Ok(user);
+        return Created("User Created!", user);
     }
 
     // Delete: User by id
@@ -67,7 +67,7 @@ public class UserController : ControllerBase
 
         _userRepository.Delete(id);
 
-        return Ok(user);
+        return NoContent();
     }
 
 

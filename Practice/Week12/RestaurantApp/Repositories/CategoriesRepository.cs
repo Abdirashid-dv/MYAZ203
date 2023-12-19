@@ -5,7 +5,7 @@ namespace Repositories;
 
 public class CategoriesRepository : IRepository<Categories>
 {
-    private List<Categories> _categories { get; set; }
+    private List<Categories> _categories;
 
     public CategoriesRepository(List<Categories> categories)
     {

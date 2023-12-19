@@ -1,25 +1,20 @@
 using Entities.Models;
 using Repositories.Contracts;
+using Repositories.Services;
 
 namespace Repositories;
 
 public class UserRepository : IRepository<User>
 {
-    private List<User> _users { get; set; }
+    private List<User> _users;
 
-    public UserRepository()
+    public UserRepository(List<User> users)
     {
-        _users = new List<User>();
+        _users = users;
     }
-
     public User GetOne(int id)
     {
-        var user = _users.SingleOrDefault(x => x.Id == id);
-
-        if (user == null)
-        {
-            throw new Exception("User not found");
-        }
+        var user = _users.SingleOrDefault(user => user.Id == id) ?? throw new Exception("User not found");
         return user;
     }
 
@@ -34,16 +29,27 @@ public class UserRepository : IRepository<User>
     {
         var user = GetOne(id);
 
+        if (user == null)
+        {
+            throw new Exception("User not found");
+        }
+
         _users.Remove(user);
     }
 
     public User GetData(string email, string password)
     {
-        var user = _users.SingleOrDefault(x => x.Email == email && x.Password == password);
+        var user = _users.SingleOrDefault(user => user.Email == email);
 
         if (user == null)
         {
             throw new Exception("User not found");
+        }
+
+        // Verify password
+        if (!user.Password.Equals(password.Encoder(user.Salt)))
+        {
+            throw new Exception("Invalid password");
         }
         return user;
     }
