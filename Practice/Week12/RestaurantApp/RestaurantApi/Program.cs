@@ -1,5 +1,7 @@
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using Repositories;
+using Repositories.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,13 +12,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register the UserRepository and create a singleton instance.
-builder.Services.AddSingleton<UserRepository>();
-builder.Services.AddSingleton<List<User>>();
+// Add services to the container.
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<ItemRepository>();
 
-// Register the ItemRepository and create a singleton instance.
-builder.Services.AddSingleton<ItemRepository>();
-builder.Services.AddSingleton<List<Items>>();
+// builder.Services.AddSingleton<List<User>>();
+// builder.Services.AddSingleton<List<Items>>();
+
+builder.Services.AddDbContext<RepositoryDbContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
+           prj => prj.MigrationsAssembly("RestaurantApi"));
+});
 
 var app = builder.Build();
 

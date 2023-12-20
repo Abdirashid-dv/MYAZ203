@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Entities.Models;
 using Repositories.Contracts;
 using Repositories.Services;
@@ -6,23 +7,32 @@ namespace Repositories;
 
 public class UserRepository : IRepository<User>
 {
-    private List<User> _users;
+    private RepositoryDbContext _dbContext;
 
-    public UserRepository(List<User> users)
+    public UserRepository(RepositoryDbContext dbContext)
     {
-        _users = users;
+        _dbContext = dbContext;
     }
+
     public User GetOne(int id)
     {
-        var user = _users.SingleOrDefault(user => user.Id == id) ?? throw new Exception("User not found");
+        var user = _dbContext.Users.SingleOrDefault(user => user.Id == id);
+        if (user == null)
+            throw new Exception("User not found");
         return user;
     }
 
     public void Post(User entity)
     {
+        if (entity == null)
+            return;
+        // generate salt
+        entity.Salt = RandomNumberGenerator.GetInt32(10000);
         // encode password
         entity.Password = entity.Password.Encoder(entity.Salt);
-        _users.Add(entity);
+
+        _dbContext.Users.Add(entity);
+        _dbContext.SaveChanges();
     }
 
     public void Delete(int id)
@@ -30,28 +40,25 @@ public class UserRepository : IRepository<User>
         var user = GetOne(id);
 
         if (user == null)
-        {
-            throw new Exception("User not found");
-        }
+            return;
 
-        _users.Remove(user);
+        _dbContext.Users.Remove(user);
+        _dbContext.SaveChanges();
     }
 
     public User GetData(string email, string password)
     {
-        var user = _users.SingleOrDefault(user => user.Email == email);
+        var user = _dbContext.Users.SingleOrDefault(user => user.Email == email);
 
-        if (user == null)
-        {
-            throw new Exception("User not found");
-        }
+        if (user is null)
+            return null;
 
         // Verify password
-        if (!user.Password.Equals(password.Encoder(user.Salt)))
-        {
-            throw new Exception("Invalid password");
-        }
-        return user;
+        var hashedPassword = password.Encoder(user.Salt);
+
+        if (user.Password.Equals(hashedPassword))
+            return user;
+        return null;
     }
 
 

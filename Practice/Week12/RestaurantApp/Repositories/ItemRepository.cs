@@ -1,20 +1,21 @@
 using Entities.Models;
 using Repositories.Contracts;
+using Repositories.Services;
 
 namespace Repositories;
 
 public class ItemRepository : IRepository<Items>
 {
-    private List<Items> _items;
+    private RepositoryDbContext dbContext;
 
-    public ItemRepository(List<Items> items)
+    public ItemRepository(RepositoryDbContext dbContext)
     {
-        _items = items;
+        this.dbContext = dbContext;
     }
 
     public Items GetOne(int id)
     {
-        var item = _items.SingleOrDefault(x => x.Id == id);
+        var item = dbContext.Items.SingleOrDefault(x => x.Id == id);
 
         if (item == null)
         {
@@ -25,7 +26,8 @@ public class ItemRepository : IRepository<Items>
 
     public void Post(Items entity)
     {
-        _items.Add(entity);
+        dbContext.Items.Add(entity);
+        dbContext.SaveChanges();
     }
 
     public void Delete(int id)
@@ -37,12 +39,13 @@ public class ItemRepository : IRepository<Items>
             throw new Exception("Item not found");
         }
 
-        _items.Remove(item);
+        dbContext.Items.Remove(item);
+        dbContext.SaveChanges();
     }
 
     public List<Items> GetAll()
     {
-        return _items;
+        return dbContext.Items.ToList();
     }
 
 }

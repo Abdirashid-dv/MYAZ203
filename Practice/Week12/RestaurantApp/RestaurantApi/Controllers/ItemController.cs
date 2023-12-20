@@ -41,8 +41,16 @@ public class ItemController : ControllerBase
 
     // POST: Add item
     [HttpPost]
-    public IActionResult AddItem(Items item)
+    public IActionResult AddItem(string name, string description, decimal price, int categoryId)
     {
+        var item = new Items
+        {
+            Name = name,
+            Description = description,
+            Price = price,
+            CategoryId = categoryId
+        };
+
         _itemRepository.Post(item);
 
         return Created("Item created!", item);

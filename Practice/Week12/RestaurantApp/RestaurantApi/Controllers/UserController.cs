@@ -37,10 +37,7 @@ public class UserController : ControllerBase
         var user = _userRepository.GetData(email, password);
 
         if (user == null)
-        {
             return NotFound();
-        }
-
         return Ok(user);
     }
 
