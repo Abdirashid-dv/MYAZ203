@@ -1,0 +1,17 @@
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Repositories.deps.json
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Repositories.runtimeconfig.json
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Repositories.dll
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Repositories.pdb
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Entities.dll
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\bin\Debug\net7.0\Entities.pdb
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfo.cs
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.csproj.CopyComplete
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.dll
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\refint\Repositories.dll
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.pdb
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\Repositories.genruntimeconfig.cache
+C:\Users\Abdirashid\MYAZ203\Practice\Week14\LibraryApp\Repositories\obj\Debug\net7.0\ref\Repositories.dll
