@@ -1,0 +1,60 @@
+@startuml Event Managment System
+
+title Event Management System UML Diagram
+
+class Event {
+  +int EventID
+  +string Title
+  +string Venue
+  +DateTime EventDate
+  +int MaxCapacity
+  +void DisplayDetails()
+  +bool CheckAvailability()
+
+
+}
+
+class Conference {
+  +List<string> SpeakerList
+  +string ConferenceType
+}
+
+class Wedding {
+  +string CoupleNames
+  +List<string> MenuOptions
+}
+
+class Concert {
+  +List<string> BandLineup
+  +string Genre
+}
+
+class Booking {
+  +int BookingID
+  +Event Event
+  +string TicketType
+  +int NumberOfTickets
+  +decimal TotalCost
+  +void MakeBooking()
+  +void CancelBooking()
+  +decimal CalculateCost()
+}
+
+class Attendee {
+  +int AttendeeID
+  +string Name
+  +string ContactInfo
+  +List<Booking> BookingHistory
+  +void RegisterForEvent(Event)
+  +void CancelRegistration(Event)
+}
+
+Event <|-- Conference
+Event <|-- Wedding
+Event <|-- Concert
+Booking "1" -- "1" Event : has >
+Attendee "1" -- "*" Booking : has >
+
+
+@enduml
+```
